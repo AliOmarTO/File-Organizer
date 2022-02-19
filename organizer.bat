@@ -11,6 +11,5 @@ if not exist "%%~xa" mkdir "%%~xa"
 rem Move the file to directory
 move "%%a" "%%~dpa%%~xa\"
 ))
-
 ECHO Files successfully organized!
 PAUSE
