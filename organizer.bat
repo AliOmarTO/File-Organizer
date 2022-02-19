@@ -3,13 +3,13 @@ rem organizes all files in directory by their file type
 ECHO Would you like to organize files?
 PAUSE
 rem For each file in your folder
-for %%a in (".\*") do (
+FOR %%a IN (".\*") DO (
 rem check if the file has an extension and if it is not our script
-if "%%~xa" NEQ "" if "%%~dpxa" NEQ "%~dpx0" (
+IF "%%~xa" NEQ "" IF "%%~dpxa" NEQ "%~dpx0" (
 rem check if extension folder exists, if not it is created
-if not exist "%%~xa" mkdir "%%~xa"
+IF NOT EXIST "%%~xa" MKDIR "%%~xa"
 rem Move the file to directory
-move "%%a" "%%~dpa%%~xa\"
+MOVE "%%a" "%%~dpa%%~xa\"
 ))
 
 ECHO Files successfully organized!
